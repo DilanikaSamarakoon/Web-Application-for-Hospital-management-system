@@ -1,0 +1,98 @@
+﻿/* General Page Styling */
+body {
+    background-image: url('images/background.jpg'); /* Ensure the image exists in the specified path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Query Form Container */
+.query-container {
+    width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Light transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Heading */
+.query-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form Labels */
+label {
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    color: #444;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* File Upload Input */
+input[type="file"] {
+    margin-bottom: 15px;
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Success Message */
+#success-message {
+    display: none;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .query-container {
+        width: 90%;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,60 @@
+<!-- index.html - Payment Form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Payment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Care Compass Hospitals</h1>
+    </header>
+
+    <section>
+        <h2>Make a Payment</h2>
+        <form id="payment-form" action="payment.php" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="branch">Select Branch</label>
+            <select id="branch" name="branch" required>
+                <option value="kandy">Kandy</option>
+                <option value="colombo">Colombo</option>
+                <option value="kurunegala">Kurunegala</option>
+            </select>
+
+            <label for="doctor">Consulting Doctor</label>
+            <select id="doctor" name="doctor" required onchange="updateTotal()">
+                <option value="5000">Dr. John Doe - LKR 5000</option>
+                <option value="4000">Dr. Jane Smith - LKR 4000</option>
+                <option value="3000">Dr. Mark Taylor - LKR 3000</option>
+            </select>
+
+            <label for="additional-charges">Additional Charges (LKR)</label>
+            <input type="number" id="additional-charges" name="additional-charges" value="0" oninput="updateTotal()">
+            
+            <label for="total-amount">Total Amount (LKR)</label>
+            <input type="text" id="total-amount" name="total-amount" readonly>
+
+            <button type="submit">Submit Payment</button>
+        </form>
+    </section>
+
+    <script>
+        function updateTotal() {
+            const doctorFee = parseFloat(document.getElementById('doctor').value) || 0;
+            const additionalCharges = parseFloat(document.getElementById('additional-charges').value) || 0;
+            const total = doctorFee + additionalCharges;
+            document.getElementById('total-amount').value = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>

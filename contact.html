@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Us - Care Compass Hospitals</title>
+    <style>
+        .search-container {
+     position: relative;
+     display: flex;
+     align-items: center;
+ }
+ 
+ #searchBar {
+     width: 250px;
+     padding: 10px 15px;
+     border: 2px solid #4CAF50;
+     border-radius: 20px;
+     font-size: 16px;
+     outline: none;
+     transition: all 0.3s ease-in-out;
+     background-color: white;
+ }
+ 
+ #searchBar::placeholder {
+     color: gray;
+     opacity: 1; /* Ensure placeholder text is visible */
+ }
+ 
+ #searchBar:focus {
+     width: 300px;
+     border-color: #2E8B57;
+ }
+ 
+     </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Navigation Bar -->
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>Care Compass Hospitals</p>
+                <div class="search-container">
+                    <input type="text" id="searchBar" onkeyup="searchMenu()" placeholder="Search...">
+                    
+                </div>
+
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul id="menuList">
+                    <li><a href="home.html" class="link">Home</a></li>
+                    <li><a href="contact.html" class="link active">Contact Us</a></li>
+                    <li><a href="services.html" class="link">Services</a></li>
+                    <li><a href="about.html" class="link">About Us</a></li>
+                    <li><a href="emergency information.html" class="link">emergency information</a></li>
+                    <li><a href="vieww_feedback.php" class="link">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+                <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+
+        <!-- Contact Us Form Section -->
+        <div class="form-box">
+            <div class="login-container">
+                <header>Contact Us</header>
+                
+                <form action="submit_contact.php" method="post">
+
+                    <div class="input-box">
+                        <input type="text" name="name" class="input-field" placeholder="Your Name" required>
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" name="email" class="input-field" placeholder="Your Email" required>
+                        <i class="bx bx-envelope"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="tel" name="phone" class="input-field" placeholder="Your Phone Number" required>
+                        <i class="bx bx-phone"></i>
+                    </div>
+                    <div class="input-box">
+                        <textarea name="message" class="input-field" placeholder="Your Message" rows="4" style="resize: none;" required></textarea>
+                        <i class="bx bx-message"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" class="submit" value="Send Message">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+     <!-- Footer -->
+    <footer class="footerhome">
+        <p>&copy; 2025 Care Compass Hospitals. All rights reserved.</p>
+        <ul class="social-icons">
+            <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+            <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+            <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+            <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
+        </ul>
+    </footer>
+   
+
+    <script>
+        function myMenuFunction() {
+            var i = document.getElementById("navMenu");
+            if (i.className === "nav-menu") {
+                i.className += " responsive";
+            } else {
+                i.className = "nav-menu";
+            }
+        }
+
+        function login() {
+            // Redirect to the home page after "Sign In" button click
+            window.location.href = "index.html"; // Adjust this if needed
+        }
+
+        function register() {
+            // Redirect to the home page after "Sign Up" button click
+            window.location.href = "index.html"; // Adjust this if needed
+        }
+
+        function searchMenu() {
+            let input = document.getElementById("searchBar").value.toLowerCase();
+            let links = document.querySelectorAll("#menuList li");
+            links.forEach(link => {
+                let text = link.textContent.toLowerCase();
+                link.style.display = text.includes(input) ? "block" : "none";
+            });
+        }
+    </script>
+        
+</body>
+</html>

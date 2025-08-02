@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make an Appointment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="apoimnet style.css">
+   
+</head>
+<body>
+
+<header>
+    <h1>Care Compass Hospitals</h1>
+    <link rel="stylesheet" href="appointment style.css">
+
+</header>
+
+<section>
+    <h2>Make an Appointment</h2>
+    <form id="appointment-form" action="book_appointment.php" method="POST">
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        
+        <label for="doctor">Select Doctor</label>
+        <select id="doctor" name="doctor" required>
+            <option value="" disabled selected>-- Select a Doctor --</option>
+            <option value="1">Dr.rusiru Fernando (Cardiologist)</option>
+            <option value="2">Dr.hiran weragoda (Obstetrics and Gynecologist)</option>
+            <option value="3">Dr.dilanika samarakoon (Dermatologist)</option>
+             <option value="4">Dr.prathiba sathsarni (Pediatrician)</option>
+            <option value="5">Dr. Nuwan Dissanayake (Neurologis)</option>
+            <option value="6">Dr. harshana suresh (Orthopedic Surgeon)</option>
+
+             <option value="7">Dr.Nimal Jayawardena (Cardiologist)</option>
+            <option value="8">Dr.sajinin ranjana (Obstetrics and Gynecologist)</option>
+            <option value="9">Dr.Kamal Gunasekara (Dermatologist)</option>
+             <option value="10">Dr. isuru perera (Pediatrician)</option>
+            <option value="11">Dr. Malithi ferando (Neurologis)</option>
+            <option value="12">Dr. Samantha Herath (Orthopedic Surgeon)</option>
+
+             <option value="13">Dr. selva Senarath (Cardiologist)</option>
+            <option value="14">Dr.Dr.uvis (Obstetrics and Gynecologist)</option>
+            <option value="15">Dr. Manoj Peris (Dermatologist)</option>
+             <option value="16">Dr.Rashmi samarakoon(Pediatrician)</option>
+            <option value="17">Dr. nipun Sathsara (Neurologis)</option>
+            <option value="18">Dr. Sadali Wanigasekare (Orthopedic Surgeon)</option>
+
+        </select>
+    
+        <label for="branch">Select Branch</label>
+        <select id="branch" name="branch" required>
+            <option value="kandy">Kandy</option>
+            <option value="colombo">Colombo</option>
+            <option value="kurunegala">Kurunegala</option>
+        </select>
+        
+        <label for="date">Preferred Appointment Date</label>
+        <input type="date" id="date" name="date" required>
+        
+        <label for="time">Preferred Time</label>
+        <input type="time" id="time" name="time" required>
+        
+        <label for="notes">Additional Notes (Optional)</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Enter any additional information"></textarea>
+        
+        <button type="submit">Book Appointment</button>
+    </form>
+    
+</section>
+
+
+
+</body>
+</html>

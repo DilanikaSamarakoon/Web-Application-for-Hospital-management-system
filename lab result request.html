@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lab result request.css">
+    <title>Lab Result Request | Care Compass Hospitals</title>
+</head>
+<body>
+<div class="wrapper">
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>Care Compass Hospitals</p>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="link">Home</a></li>
+            <li><a href="appointments.html" class="link">Appointments</a></li>
+            <li><a href="reports.html" class="link">Reports</a></li>
+            <li><a href="lab-request.html" class="link active">Lab Request</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Lab Result Request Form</h1>
+        <p>Submit your request to access your lab results quickly and securely.</p>
+    </header>
+
+    <!-- Request Form Section -->
+    <section class="form-section">
+        <form action="#" method="post" class="request-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="test-type">Test Type</label>
+                <select id="test-type" name="test_type" required>
+                    <option value="" disabled selected>Select Test Type</option>
+                    <option value="blood">Blood Test</option>
+                    <option value="xray">X-Ray</option>
+                    <option value="mri">MRI</option>
+                    <option value="ct">CT Scan</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Additional Notes</label>
+                <textarea id="message" name="message" rows="4" placeholder="Enter any additional notes or requests"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Submit Request</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Care Compass Hospitals. All rights reserved.</p>
+    </footer>
+</div>
+</body>
+</html>

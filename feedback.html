@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="feedback.css">
+    <title>View Patient Feedback | Care Compass Hospitals</title>
+</head>
+<body>
+<div class="wrapper">
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>Care Compass Hospitals</p>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="link">Home</a></li>
+            <li><a href="appointments.html" class="link">Appointments</a></li>
+            <li><a href="feedback.html" class="link active">Feedback</a></li>
+            <li><a href="contact.html" class="link">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Patient Feedback</h1>
+        <p>View valuable feedback submitted by our patients.</p>
+    </header>
+
+    <!-- Feedback Section -->
+    <section class="feedback-section">
+        <form class="feedback-form" action="submit_feedback.php" method="post">
+
+        <div class="feedback-grid">
+            <!-- Feedback Card -->
+            <div class="feedback-card">
+                <img src="images/pre.jpeg" alt="John Doe" class="patient-photo">
+                <div class="feedback-content">
+                    <h3>John Doe</h3>
+                    <p><strong>Feedback:</strong> Excellent service! Staff was very professional.</p>
+                    <p><strong>Date:</strong> 2025-01-10</p>
+                    
+                </div>
+            </div>
+
+            <!-- Feedback Card -->
+            <div class="feedback-card">
+                <img src="images/pre1.jpeg" alt="Jane Smith" class="patient-photo">
+                <div class="feedback-content">
+                    <h3>Jane Smith</h3>
+                    <p><strong>Feedback:</strong> Waiting time was a bit long but overall great experience.</p>
+                    <p><strong>Date:</strong> 2025-01-12</p>
+                    
+                </div>
+            </div>
+
+            <!-- Feedback Card -->
+            <div class="feedback-card">
+                <img src="images/pre2.jpeg" alt="Michael Brown" class="patient-photo">
+                <div class="feedback-content">
+                    <h3>Michael Brown</h3>
+                    <p><strong>Feedback:</strong> The doctors were amazing and very helpful!</p>
+                    <p><strong>Date:</strong> 2025-01-15</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Footer -->
+    <footer class="footerhome">
+        <p>&copy; 2025 Care Compass Hospitals. All rights reserved.</p>
+        <ul class="social-icons">
+            <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+            <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+            <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+            <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>

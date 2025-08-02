@@ -1,0 +1,120 @@
+﻿body
+{
+}
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #d3f7d3;
+}
+
+.nav-menu a.active {
+    border-bottom: 2px solid white;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.page-header h1 {
+    font-size: 28px;
+    color: #333;
+    margin: 0;
+}
+
+.page-header p {
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Results Section */
+.results-section {
+    padding: 20px;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.results-table th, .results-table td {
+    text-align: left;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.results-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.results-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.results-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    margin-top: auto;
+}

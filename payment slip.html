@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Slip</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slip.css">
+</head>
+<body>
+
+<header>
+    <h1>Care Compass Hospitals</h1>
+</header>
+
+<section>
+    <h2>Patient Payment Slip</h2>
+    <div id="payment-slip">
+        <p><strong>Patient Name:</strong> <span id="slip-name"></span></p>
+        <p><strong>Email:</strong> <span id="slip-email"></span></p>
+        <p><strong>Phone:</strong> <span id="slip-phone"></span></p>
+        <p><strong>Branch:</strong> <span id="slip-branch"></span></p>
+        <p><strong>Doctor Fee:</strong> LKR <span id="slip-doctor"></span></p>
+        <p><strong>Additional Charges:</strong> LKR <span id="slip-additional"></span></p>
+        <p><strong>Total Amount Paid:</strong> LKR <span id="slip-total-amount"></span></p>
+    </div>
+
+    <h2>Payment Details</h2>
+    <label for="card-number">Credit Card Number:</label>
+    <input type="text" id="card-number" placeholder="Enter your card number" required maxlength="16">
+    
+    <br><br>
+    
+    <input type="checkbox" id="opt-in">
+    <label for="opt-in">I confirm the payment details are correct</label>
+    
+    <br><br>
+    
+    <button onclick="pay()">Pay</button>
+</section>
+
+<script>
+    function loadPaymentDetails() {
+        fetch('fetch_payment.php') // Ensure this PHP file fetches the latest payment details
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert(data.error);
+                    return;
+                }
+
+                document.getElementById('slip-name').innerText = data.name;
+                document.getElementById('slip-email').innerText = data.email;
+                document.getElementById('slip-phone').innerText = data.phone;
+                document.getElementById('slip-branch').innerText = data.branch;
+                document.getElementById('slip-doctor').innerText = data.doctor_fee;
+                document.getElementById('slip-additional').innerText = data.additional_charges;
+                document.getElementById('slip-total-amount').innerText = data.total_amount;
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    function pay() {
+        const cardNumber = document.getElementById("card-number").value.trim();
+        const optIn = document.getElementById("opt-in").checked;
+
+        if (!cardNumber || cardNumber.length !== 16 || isNaN(cardNumber)) {
+            alert("Please enter a valid 16-digit credit card number.");
+            return;
+        }
+
+        if (!optIn) {
+            alert("Please confirm the payment details.");
+            return;
+        }
+
+        alert("Payment Successful!");
+    }
+
+    window.onload = loadPaymentDetails;
+</script>
+
+</body>
+</html>

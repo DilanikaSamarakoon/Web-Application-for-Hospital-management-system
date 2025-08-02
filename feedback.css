@@ -1,0 +1,109 @@
+﻿/* Wrapper styles */
+.wrapper {
+    font-family: Arial, sans-serif;
+    margin: 0;
+     padding: 20px 0 0; 
+    line-height: 1.6;
+}
+
+/* Navigation styles */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0044cc;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu .link.active {
+    text-decoration: underline;
+}
+
+/* Page Header */
+.page-header {
+    top-margin: 250px;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    background: #f4f4f4;
+}
+
+/* Feedback Section */
+.feedback-section {
+    padding: 20px;
+    background: #fafafa;
+}
+
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.feedback-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px;
+}
+
+.patient-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0044cc;
+}
+
+.feedback-content {
+    flex: 1;
+}
+
+.feedback-content h3 {
+    margin: 0;
+    color: #333;
+}
+
+.feedback-content p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.btn-view {
+    background: #0044cc;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-view:hover {
+    background: #003399;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #0044cc;
+    color: #fff;
+}

@@ -1,0 +1,155 @@
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: url("post-hospital-care-banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    background: rgba(39, 39, 39, 0.4);
+}
+.nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39,39,39, 0.6), transparent);
+    z-index: 100;
+}
+.nav-logo p{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+.nav-menu ul{
+    display: flex;
+}
+.nav-menu ul li{
+    list-style-type: none;
+}
+.nav-menu ul li .link{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+.link:hover, .active{
+    border-bottom: 2px solid #fff;
+}
+.nav-button .btn{
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.btn:hover{
+    background: rgba(255, 255, 255, 0.3);
+}
+#registerBtn{
+    margin-left: 15px;
+}
+.btn.white-btn{
+    background: rgba(255, 255, 255, 0.7);
+}
+.btn.btn.white-btn:hover{
+    background: rgba(255, 255, 255, 0.5);
+}
+.nav-menu-btn{
+    display: none;
+}
+
+
+
+
+/* About Us Specific Styles */
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    text-align: center; /* Center-align text inside the container */
+    color: #fff;
+    
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    text-align: center; /* Center-align text inside the container */
+    font-size: 28px;
+    
+}
+
+.about-content {
+    max-width: 800px;
+    color: #fff;
+    padding: 20px;
+}
+
+.about-content header {
+    font-size: 36px; /* Increase font size for "About Us" */
+    font-weight: bold; /* Make it bold */
+    color: #fff; /* Ensure the color matches the design */
+    margin-bottom: 20px; /* Add space below the header */
+}
+
+.about-section {
+    margin-bottom: 20px;
+}
+
+.about-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 16px;
+}
+
+.about-section ul {
+    margin-top: 10px;
+}
+
+.about-section ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footerhome {
+        padding: 15px 0;
+    }
+    .social-icons {
+        gap: 10px;
+    }
+    .social-icons a {
+        font-size: 18px;
+    }
+}
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Reports</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Care Compass Hospitals</h1>
+</header>
+
+<section>
+    <h2>Existing Patient Reports</h2>
+    <table border="1">
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Assigned Doctor</th>
+            <th>Diagnosis</th>
+        </tr>
+        <?php foreach ($reports as $report) { ?>
+            <tr>
+                <td><?php echo htmlspecialchars($report['full_name']); ?></td>
+                <td><?php echo htmlspecialchars($report['email']); ?></td>
+                <td><?php echo htmlspecialchars($report['assigned_doctor']); ?></td>
+                <td><?php echo htmlspecialchars($report['diagnosis']); ?></td>
+            </tr>
+        <?php } ?>
+    </table>
+</section>
+
+</body>
+</html>

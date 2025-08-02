@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Information | Care Compass Hospitals</title>
+    <link rel="stylesheet" href="about.css">
+    <style>
+        .search-container {
+     position: relative;
+     display: flex;
+     align-items: center;
+ }
+ 
+ #searchBar {
+     width: 250px;
+     padding: 10px 15px;
+     border: 2px solid #4CAF50;
+     border-radius: 20px;
+     font-size: 16px;
+     outline: none;
+     transition: all 0.3s ease-in-out;
+     background-color: white;
+ }
+ 
+ #searchBar::placeholder {
+     color: gray;
+     opacity: 1; /* Ensure placeholder text is visible */
+ }
+ 
+ #searchBar:focus {
+     width: 300px;
+     border-color: #2E8B57;
+ }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('post-hospital-care-banner.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            padding: 50px;
+            
+        }
+        h1, h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+       <nav class="nav">
+           <div class="nav-logo">
+               <p>Care Compass Hospitals</p>
+               <div class="search-container">
+                   <input type="text" id="searchBar" onkeyup="searchMenu()" placeholder="Search...">
+                  
+               </div>
+           </div>
+           <div class="nav-menu" id="navMenu">
+               <ul id="menuList">
+                   <li><a href="home.html" class="link">Home</a></li>
+                   <li><a href="contact.html" class="link">Contact Us</a></li>
+                   <li><a href="services.html" class="link">Services</a></li>
+                   <li><a href="about.html" class="link active">About Us</a></li>
+                   <li><a href="emergency information.html" class="link">emergency information</a></li>
+                   <li><a href="vieww_feedback.php" class="link">Feedback</a></li>
+               </ul>
+           </div>
+           <div class="nav-button">
+               <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+               <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+           </div>
+           
+           <div class="nav-menu-btn">
+               <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+           </div>
+       </nav>
+<body>
+    <div class="container">
+       
+        <h2 class="highlight">In Case of Emergency, Call: <br> <span style="color: red;">+1 800 123 4567</span></h2>
+        <p>
+            If you or someone else is experiencing a medical emergency, please call the emergency hotline immediately.
+        </p>
+        <h2>Emergency Services</h2>
+        <p><span class="highlight">24/7 Emergency Room:</span> Our hospital is open 24/7 for any urgent medical care.</p>
+        <p><span class="highlight">Ambulance Services:</span> Available round the clock. Call our emergency hotline to request assistance.</p>
+        <p><span class="highlight">Specialist Care:</span> We have on-call specialists available for critical conditions, including cardiology, neurology, and trauma care.</p>
+        <h2>Important Contacts</h2>
+        <p><span class="highlight">Poison Control:</span> +1 800 222 1222</p>
+        <p><span class="highlight">Fire Department:</span> 911</p>
+        <p><span class="highlight">Police:</span> 911</p>
+        <p>For further assistance, visit the hospital reception or call our helpline.</p>
+    </div>
+    <script>
+        function myMenuFunction() {
+            var i = document.getElementById("navMenu");
+    
+            if(i.className === "nav-menu") {
+                i.className += " responsive";
+            } else {
+                i.className = "nav-menu";
+            }
+        }
+    
+        // Function to handle login
+        function login() {
+            // Redirect to the home page after "Sign In" button click
+            window.location.href = "index.html"; // Adjust this if needed
+        }
+    
+        // Function to handle registration
+        function register() {
+            // Redirect to the home page after "Sign Up" button click
+            window.location.href = "index.html"; // Adjust this if needed
+        }
+        function searchMenu() {
+                let input = document.getElementById("searchBar").value.toLowerCase();
+                let links = document.querySelectorAll("#menuList li");
+                links.forEach(link => {
+                    let text = link.textContent.toLowerCase();
+                    link.style.display = text.includes(input) ? "block" : "none";
+                });
+            }
+    </script>
+
+</body>
+</html>

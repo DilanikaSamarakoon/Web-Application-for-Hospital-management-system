@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="doctor.css" />
+    <style>
+        #menuSearch {
+            padding: 8px;
+            margin: 10px 0;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function searchMenu() {
+            let input = document.getElementById('menuSearch').value.toLowerCase();
+            let links = document.querySelectorAll('.nav-links li');
+            
+            links.forEach(link => {
+                let text = link.textContent.toLowerCase();
+                if (text.includes(input)) {
+                    link.style.display = "block";
+                } else {
+                    link.style.display = "none";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Care Compass Hospitals</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Doctors at Care Compass Hospitals</h2>
+
+        <div class="branch" id="colombo">
+            <h3>Colombo Branch</h3>
+            <div class="doctor-card">
+                <img src="images/dr1.jpeg" alt="Dr.rusiru Fernando">
+                <h3>Dr.rusiru Fernando</h3>
+                <p>Cardiologist</p>
+                <p>Email: rusirufernando@gmail.com</p>
+                <p>Phone: +94 71 234 5678</p>
+            </div>
+            <div class="doctor-card">
+                <img src="images/dr2.jpg" alt="Dr.hiran weragoda">
+                <h3>Dr.hiran weragoda</h3>
+                <p>Obstetrics and Gynecologist</p>
+                <p>Email: hiran@gmail.com</p>
+                <p>Phone: +94 77 234 5679</p>
+            </div>
+            <div class="doctor-card">
+                <img src="images/dr3.jpeg" alt="Dr.dilanika samarakoon">
+                <h3>Dr.dilanika samarakoon</h3>
+                <p>Dermatologist</p>
+                <p>Email: dilanikasamarakoon@gmail.com</p>
+                <p>Phone: +94 71 234 5680</p>
+            </div>
+            <div class="doctor-card">
+                <img src="images/dr4.jpg" alt="Dr.prthiba stathsrani">
+                <h3>Dr.prathiba sathsarni</h3>
+                <p>Pediatrician</p>
+                <p>Email: prathibasathsarani@gmail.com</p>
+                <p>Phone: +94 72 234 5681</p>
+            </div>
+            <div class="doctor-card">
+                <img src="images/dr10.jpg" alt="Dr.Nuwan Dissanayake">
+                <h3>Dr.Nuwan Dissanayake</h3>
+                <p>Neurologist</p>
+                <p>Email: nuwandissanayake@gmail.com</p>
+                <p>Phone: +94 75 234 5682</p>
+            </div>
+            <div class="doctor-card">
+                <img src="images/hh.jpg" alt="Dr.harshana suresh">
+                <h3>Dr.harshana suresh</h3>
+                <p>Orthopedic Surgeon</p>
+                <p>Email: harshanasuresh@gmail.com</p>
+                <p>Phone: +94 71 234 5683</p>
+            </div>
+        </div>
+
+        <div class="branch" id="kandy">
+            <h3>Kandy Branch</h3>
+            <div class="doctor-card">
+                <img src="images/doctor9.jpg" alt="Dr.Nimal Jayawardena">
+                <h3>Dr.Nimal Jayawardena</h3>
+                <p>Cardiologist</p>
+                <p>Email: nimaljayawardena@gmail.com</p>
+                <p>Phone: +94 77 876 5432</p>
+            </div>
+            <div class="doctor-card">
+                <img src="images/doctor18.jpg" alt="Dr.sajini ranjana">
+                <h3>Dr.sajinin ranjana</h3>
+                <p>Obstetrics and Gynecologist</p>
+                <p>Email: sajini ranjana@gmail.com</p>
+                <p>Phone: +94 72 876 5433</p>
+            </div>
+            <div class="doctor-card">
+                <img src="images/doctor17.jpg" alt="Dr.Kamal Gunasekara">
+                <h3>Dr.Kamal Gunasekara</h3>
+                <p>Dermatologist</p>
+                <p>Email: kamalgunasekara@gmail.com</p>
+                <p>Phone: +94 77 876 5434</p>
+            </div>
+            <div class="doctor-card">
+                <img src="images/doctor16.jpg" alt="Dr.isuru perera">
+                <h3>Dr.isuru perera</h3>
+                <p>Pediatrician</p>
+                <p>Email: isuruperera.com</p>
+                <p>Phone: +94 75 876 5435</p>
+            </div>
+            <div class="doctor-card">
+                <img src="images/doctor15.jpg" alt="Dr.Malithi ferando">
+                <h3>Dr.Malithi ferando</h3>
+                <p>Neurologist</p>
+                <p>Email: malithiferando@gmail.com</p>
+                <p>Phone: +94 70 876 5436</p>
+            </div>
+            <div class="doctor-card">
+                <img src="images/doctor14.jpg" alt="Dr.Samantha Herath">
+                <h3>Dr.Samantha Herath</h3>
+                <p>Orthopedic Surgeon</p>
+                <p>Email: samanthaherath@gmail.com</p>
+                <p>Phone: +94 77 876 5437</p>
+            </div>
+        </div>
+
+        <div class="branch" id="kurunegala">
+            <h3>Kurunegala Branch</h3>
+            <div class="doctor-card">
+                <img src="images/doctor13.jpg" alt="Dr.selva Senarath">
+                <h3>Dr.selva Senarath</h3>
+                <p>Cardiologist</p>
+                <p>Email: selvasenarath@gmail.com</p>
+                <p>Phone: +94 77 578 4567</p>
+            </div>
+            <div class="doctor-card">
+                <img src="images/doctor11.jpg" alt="Dr.uvis">
+                <h3>Dr.uvis</h3>
+                <p>Orthopedic Surgeon</p>
+                <p>Email: uvis.com</p>
+                <p>Phone: +94 70 432 5437</p>
+            </div>
+            <div class="doctor-card">
+                <img src="images/doctor10.jpg" alt="Dr.Manoj Peris">
+                <h3>Dr.Manoj Peris</h3>
+                <p>Obstetrics and Gynecologist</p>
+                <p>Email: manojperis@gmail.com</p>
+                <p>Phone: +94 71 4567 5433</p>
+            </div>
+            <div class="doctor-card">
+                <img src="images/doctor18.jpg" alt="Dr.Rashmi samarakoon">
+                <h3>Dr.Rashmi samarakoon</h3>
+                <p>Dermatologist</p>
+                <p>Email: rashmisamarakoon@gmail.com</p>
+                <p>Phone: +94 75 876 5434</p>
+            </div>
+            <div class="doctor-card">
+                <img src="images/doctor7.jpg" alt="Dr.nipun Sathsara">
+                <h3>Dr.nipun Sathsara</h3>
+                <p>Pediatrician</p>
+                <p>Email: nipunsathsara@gmail.com</p>
+                <p>Phone: +94 76 176 5995</p>
+            </div>
+            <div class="doctor-card">
+                <img src="images/doctor6.jpg" alt="Dr.Sadali Wanigasekare">
+                <h3>Dr.Sadali Wanigasekare</h3>
+                <p>Neurologist</p>
+                <p>Email: sadaliwanigasekare@gmail.com</p>
+                <p>Phone: +94 70 678 3336</p>
+            </div>
+        </div>
+    </div>
+
+
+ <footer>
+        <p>&copy; 2024 Care Compass Hospitals. All Rights Reserved.</p>
+        <nav>
+            <ul class="footer-nav">
+                <li><a href="#privacy-policy">Privacy Policy</a></li>
+                <li><a href="#terms-of-service">Terms of Service</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>

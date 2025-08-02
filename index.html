@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Care Compass | Login & Registration</title>
+    <style>
+       .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#searchBar {
+    width: 250px;
+    padding: 10px 15px;
+    border: 2px solid #4CAF50;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#searchBar::placeholder {
+    color: gray;
+    opacity: 1; /* Ensure placeholder text is visible */
+}
+
+#searchBar:focus {
+    width: 300px;
+    border-color: #2E8B57;
+}
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>Care Compass Hospitals</p>
+                <div class="search-container">
+                    <input type="text" id="searchBar" onkeyup="searchMenu()" placeholder="Search...">
+                    <i class="bx bx-search search-icon"></i>
+                </div>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul id="menuList">
+                    <li><a href="home.html" class="link">Home</a></li>
+                    <li><a href="contact.html" class="link">Contact Us</a></li>
+                    <li><a href="services.html" class="link active">Services</a></li>
+                    <li><a href="about.html" class="link">About Us</a></li>
+                    <li><a href="emergency information.html" class="link">Emergency Information</a></li>
+                    <li><a href="vieww_feedback.php" class="link">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+                <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+
+        <!----------------------------- Form box ----------------------------------->
+        <div class="form-box">
+            <!-- Login Form -->
+            <div class="login-container" id="login">
+                <div class="top">
+                    <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                    <header>Login</header>
+                </div>
+                <form action="login.php" method="POST">
+                    <div class="input-box">
+                        <input type="email" name="email" class="input-field" placeholder="Email" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="password" class="input-field" placeholder="Password" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" class="submit" value="Sign In">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="register-container" id="register">
+                <div class="top">
+                    <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                    <header>Sign Up</header>
+                </div>
+                <form action="register.php" method="POST">
+                    <div class="input-box">
+                        <input type="text" name="firstname" class="input-field" placeholder="Firstname" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="lastname" class="input-field" placeholder="Lastname" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" name="email" class="input-field" placeholder="Email" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="password" class="input-field" placeholder="Password" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" class="submit" value="Register">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+       function myMenuFunction() {
+            var i = document.getElementById("navMenu");
+
+            if (i.className === "nav-menu") {
+                i.className += " responsive";
+            } else {
+                i.className = "nav-menu";
+            }
+        }
+
+        var a = document.getElementById("loginBtn");
+        var b = document.getElementById("registerBtn");
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+
+        function login() {
+            x.style.left = "4px";
+            y.style.right = "-520px";
+            a.className += " white-btn";
+            b.className = "btn";
+            x.style.opacity = 1;
+            y.style.opacity = 0;
+        }
+
+        function register() {
+            x.style.left = "-510px";
+            y.style.right = "5px";
+            a.className = "btn";
+            b.className += " white-btn";
+            x.style.opacity = 0;
+            y.style.opacity = 1;
+        }
+
+        function searchMenu() {
+            let input = document.getElementById("searchBar").value.toLowerCase();
+            let links = document.querySelectorAll("#menuList li");
+            links.forEach(link => {
+                let text = link.textContent.toLowerCase();
+                link.style.display = text.includes(input) ? "block" : "none";
+            });
+        }
+    </script>
+</body>
+</html>

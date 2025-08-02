@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Manage Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Admin - Feedback Management</h1>
+    </header>
+    
+    <section>
+        <h2>Feedback List</h2>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Feedback</th>
+                <th>Action</th>
+            </tr>
+            <?php while ($row = $result->fetch_assoc()) { ?>
+            <tr>
+                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['name']; ?></td>
+                <td><?php echo $row['email']; ?></td>
+                <td><?php echo $row['feedback']; ?></td>
+                <td>
+                    <form method="POST">
+                        <input type="hidden" name="feedback_id" value="<?php echo $row['id']; ?>">
+                        <button type="submit" name="delete_feedback">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            <?php } ?>
+        </table>
+    </section>
+</body>
+</html>

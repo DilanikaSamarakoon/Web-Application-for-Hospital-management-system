@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Data Entry</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+<header>
+    <h1>Care Compass Hospitals</h1>
+</header>
+
+<section>
+    <h2>Patient Report</h2>
+    <form id="patient-form" action="report.php" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter full name" required>
+
+        
+
+        <label for="email">Email (Optional)</label>
+        <input type="email" id="email" name="email" placeholder="Enter email address">
+
+        <label for="doctor">Assigned Doctor</label>
+        <select id="doctor" name="doctor" required>
+            <option value="" disabled selected>-- Select a Doctor --</option>
+            <option value="Dr. John Doe">Dr. John Doe (Cardiologist)</option>
+            <option value="Dr. Jane Smith">Dr. Jane Smith (Dermatologist)</option>
+            <option value="Dr. Mark Taylor">Dr. Mark Taylor (Pediatrician)</option>
+        </select>
+
+        
+
+        <label for="current-diagnosis">Current Diagnosis</label>
+        <textarea id="current-diagnosis" name="current-diagnosis" rows="3" placeholder="Enter current diagnosis or reason for visit" required></textarea>
+
+    
+
+        <button type="submit">send to patient</button>
+    </form>
+</section>
+
+
+
+</body>
+</html>

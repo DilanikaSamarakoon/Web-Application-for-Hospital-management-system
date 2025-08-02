@@ -1,0 +1,212 @@
+﻿/* General Wrapper */
+.wrapper {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0044cc;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu .link.active {
+    text-decoration: underline;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+/* Reports Section */
+.reports-section {
+    padding: 20px;
+    background: #fafafa;
+}
+
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.report-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.patient-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0044cc;
+}
+
+.report-content {
+    flex: 1;
+}
+
+.report-content h3 {
+    margin: 0;
+    color: #333;
+}
+
+.report-content p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.btn-view {
+    background: #0044cc;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-view:hover {
+    background: #003399;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #0044cc;
+    color: #fff;
+}
+/* General Wrapper */
+.wrapper {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0044cc;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu .link.active {
+    text-decoration: underline;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+/* Reports Section */
+.reports-section {
+    padding: 20px;
+    background: #fafafa;
+}
+
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.report-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.patient-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0044cc;
+}
+
+.report-content {
+    flex: 1;
+}
+
+.report-content h3 {
+    margin: 0;
+    color: #333;
+}
+
+.report-content p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.btn-view {
+    background: #0044cc;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-view:hover {
+    background: #003399;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #0044cc;
+    color: #fff;
+}

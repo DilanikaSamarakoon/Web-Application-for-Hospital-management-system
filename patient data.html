@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Data Entry</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="patient data.css">
+</head>
+<body>
+
+<header>
+    <h1>Care Compass Hospitals</h1>
+</header>
+
+<section>
+    <h2>Patient Data Entry Form</h2>
+    <form id="patient-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter full name" required>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" placeholder="Enter age" required>
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+
+        <label for="email">Email (Optional)</label>
+        <input type="email" id="email" name="email" placeholder="Enter email address">
+
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" placeholder="Enter patient address" required></textarea>
+
+        <label for="medical-history">Medical History</label>
+        <textarea id="medical-history" name="medical-history" rows="4" placeholder="Enter previous medical history (if any)"></textarea>
+
+        <label for="current-diagnosis">Current Diagnosis</label>
+        <textarea id="current-diagnosis" name="current-diagnosis" rows="3" placeholder="Enter current diagnosis or reason for visit" required></textarea>
+
+        <label for="doctor">Assigned Doctor</label>
+        <select id="doctor" name="doctor" required>
+            <option value="" disabled selected>-- Select a Doctor --</option>
+            <option value="Dr. John Doe">Dr. John Doe (Cardiologist)</option>
+            <option value="Dr. Jane Smith">Dr. Jane Smith (Dermatologist)</option>
+            <option value="Dr. Mark Taylor">Dr. Mark Taylor (Pediatrician)</option>
+        </select>
+
+        <button type="submit">Save Patient Data</button>
+    </form>
+</section>
+
+<script>
+    document.getElementById('patient-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const patientData = {
+            name: document.getElementById('name').value,
+            age: document.getElementById('age').value,
+            gender: document.getElementById('gender').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value,
+            address: document.getElementById('address').value,
+            medicalHistory: document.getElementById('medical-history').value,
+            currentDiagnosis: document.getElementById('current-diagnosis').value,
+            doctor: document.getElementById('doctor').value,
+        };
+
+        console.log("Patient Data:", patientData);
+
+        // Store data in local storage (for testing)
+        localStorage.setItem('patientData', JSON.stringify(patientData));
+
+        alert("Patient data saved successfully!");
+        document.getElementById('patient-form').reset();
+    });
+</script>
+
+</body>
+</html>

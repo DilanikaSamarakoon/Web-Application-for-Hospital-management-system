@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="manage staff accounts.css">
+    <title>Admin Dashboard | Manage Staff Accounts</title>
+</head>
+<body>
+<div class="wrapper">
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>Care Compass Hospitals</p>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="dashboard.html" class="link">Dashboard</a></li>
+            <li><a href="manage-staff.html" class="link active">Manage Staff</a></li>
+            <li><a href="feedback.html" class="link">Feedback</a></li>
+            <li><a href="appointments.html" class="link">Appointments</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Manage Staff Accounts</h1>
+        <p>Add, update, or delete staff profiles for hospital operations.</p>
+    </header>
+
+    <!-- Staff Management Form Section -->
+    <section class="staff-form-section">
+        <h2>Add New Staff</h2>
+        <form action="#" method="post" class="staff-form">
+            <div class="form-group">
+                <label for="staff-name">Full Name</label>
+                <input type="text" id="staff-name" name="staff-name" required>
+            </div>
+            <div class="form-group">
+                <label for="staff-email">Email Address</label>
+                <input type="email" id="staff-email" name="staff-email" required>
+            </div>
+            <div class="form-group">
+                <label for="staff-role">Role</label>
+                <select id="staff-role" name="staff-role" required>
+                    <option value="Manager">Manager</option>
+                    <option value="Cashier">Cashier</option>
+                    <option value="Nurse">Nurse</option>
+                    <option value="Doctor">Doctor</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="staff-password">Password</label>
+                <input type="password" id="staff-password" name="staff-password" required>
+            </div>
+            <button type="submit" class="btn-submit">Add Staff</button>
+        </form>
+    </section>
+
+    <!-- Existing Staff Table Section -->
+    <section class="staff-table-section">
+        <h2>Existing Staff</h2>
+        <table class="staff-table">
+            <thead>
+                <tr>
+                    <th>Staff ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>John Doe</td>
+                    <td>john.doe@carecompass.com</td>
+                    <td>Manager</td>
+                    <td>
+                        <button class="btn-edit">Edit</button>
+                        <button class="btn-delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Jane Smith</td>
+                    <td>jane.smith@carecompass.com</td>
+                    <td>Cashier</td>
+                    <td>
+                        <button class="btn-edit">Edit</button>
+                        <button class="btn-delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>Michael Brown</td>
+                    <td>michael.brown@carecompass.com</td>
+                    <td>Doctor</td>
+                    <td>
+                        <button class="btn-edit">Update</button>
+                        <button class="btn-delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Care Compass Hospitals. All rights reserved.</p>
+        <ul class="social-icons">
+            <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+            <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+            <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+            <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Doctors | Care Compass Hospitals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="page-header">
+            <h1>Available Doctors</h1>
+            <p>Select a branch to view doctors available in Branch 3: Kandy, Kurunegala, Colombo.</p>
+        </header>
+        <div class="branch-selection">
+            <label for="branchSelect">Choose a branch:</label>
+            <select id="branchSelect" onchange="filterDoctors()">
+                <option value="">Select Branch</option>
+                <option value="kandy">Kandy</option>
+                <option value="kurunegala">Kurunegala</option>
+                <option value="colombo">Colombo</option>
+            </select>
+        </div>
+
+        <div id="doctorsList" class="doctors-container">
+            <!-- Kandy -->
+            <div class="doctor-card kandy">
+           <h3>Dr. Jane Doe</h3>
+                <p><strong>Specialization:</strong> Cardiologist</p>
+                <p><strong>Contact:</strong> +1-800-111-1234</p>
+            </div>
+            <h3>Dr. John Smith</h3>
+                <p><strong>Specialization:</strong> Neurologist</p>
+                <p><strong>Contact:</strong> +1-800-111-5678</p>
+            </div>
+            <div class="doctor-card kandy">
+            <h3>Dr. David michael</h3>
+                <p><strong>Specialization:</strong> Dermatologist</p>
+                <p><strong>Contact:</strong> +1-800-111-6666</p>
+            </div>
+            <div class="doctor-card kandy">
+           <h3>Dr. Robert james</h3>
+                <p><strong>Specialization:</strong> Anesthesiology</p>
+                <p><strong>Contact:</strong> +1-800-111-5998</p>
+            </div>
+             <div class="doctor-card kandy">
+          <h3>Dr. Richard wiliam</h3>
+                <p><strong>Specialization:</strong> family medicine</p>
+                <p><strong>Contact:</strong> +1-800-111-1233</p>
+            </div>
+            <div class="doctor-card kandy">
+            <h3>Dr. Jennifer peter</h3>
+                <p><strong>Specialization:</strong> General Surgery</p>
+                <p><strong>Contact:</strong> +1-800-111-5622</p>
+            </div>
+            <div class="doctor-card kandy">
+           <h3>Dr. joseph shaffer</h3>
+                <p><strong>Specialization:</strong> endpcrinologist</p>
+                <p><strong>Contact:</strong> +1-800-111-9655</p>
+            </div>
+            <div class="doctor-card kandy">
+            <h3>Dr. Robert anderson</h3>
+                <p><strong>Specialization:</strong> geriatrics</p>
+                <p><strong>Contact:</strong> +1-800-111-1111</p>
+            </div>
+
+            <!-- Kurunegala -->
+            <div class="doctor-card kurunegala">
+            
+                <h3>Dr. Emily Rose</h3>
+                <p><strong>Specialization:</strong> Pediatrician</p>
+                <p><strong>Contact:</strong> +1-800-222-2563</p>
+            </div>
+            <div class="doctor-card kurunegala">
+                <h3>Dr. Liam Wong</h3>
+                <p><strong>Specialization:</strong> Dermatologist</p>
+                <p><strong>Contact:</strong> +1-800-222-5678</p>
+            </div>
+             <div class="doctor-card kurunegala">
+            
+                <h3>Dr. lily rose</h3>
+                <p><strong>Specialization:</strong> endpcrinologist</p>
+                <p><strong>Contact:</strong> +1-800-222-1234</p>
+            </div>
+            <div class="doctor-card kurunegala">
+                <h3>Dr. perter jhon</h3>
+                <p><strong>Specialization:</strong> General Surgery</p>
+                <p><strong>Contact:</strong> +1-800-222-9685/p>
+            </div>
+             <div class="doctor-card kurunegala">
+            <h3>Dr. neel hauge</h3>
+                <p><strong>Specialization:</strong> family medicine</p>
+                <p><strong>Contact:</strong> +1-800-222-2367</p>
+            </div>
+            <div class="doctor-card kurunegala">
+                <h3>Dr. cortney white</h3>
+                <p><strong>Specialization:</strong> Cardiologist</p>
+                <p><strong>Contact:</strong> +1-800-222-5893</p>
+            </div>
+            
+
+            <!-- Colombo -->
+            <div class="doctor-card colombo">
+                <h3>Dr. Ava Green</h3>
+                <p><strong>Specialization:</strong> Orthopedic Surgeon</p>
+                <p><strong>Contact:</strong> +1-800-333-1234</p>
+            </div>
+            <div class="doctor-card colombo">
+                <h3>Dr. Noah Brown</h3>
+                <p><strong>Specialization:</strong> General Practitioner</p>
+                <p><strong>Contact:</strong> +1-800-333-5678</p>
+            </div>
+             <div class="doctor-card Colombo">
+            
+                <h3>Dr. Jane Doe</h3>
+                <p><strong>Specialization:</strong> Cardiologist</p>
+                <p><strong>Contact:</strong> +1-800-111-1234</p>
+            </div>
+            <div class="doctor-card Colombo">
+            <h3>Dr. John Smith</h3>
+                <p><strong>Specialization:</strong> Neurologist</p>
+                <p><strong>Contact:</strong> +1-800-111-5678</p>
+            </div>
+            <div class="doctor-card Colombo">
+         <h3>Dr. Jane Doe</h3>
+                <p><strong>Specialization:</strong> Cardiologist</p>
+                <p><strong>Contact:</strong> +1-800-111-1234</p>
+            </div>
+            <div class="doctor-card Colombo">
+            <h3>Dr. John Smith</h3>
+                <p><strong>Specialization:</strong> Neurologist</p>
+                <p><strong>Contact:</strong> +1-800-111-5678</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterDoctors() {
+            const selectedBranch = document.getElementById('branchSelect').value;
+            const doctorCards = document.querySelectorAll('.doctor-card');
+
+            doctorCards.forEach(card => {
+                card.style.display = 'none'; // Hide all cards initially
+                if (card.classList.contains(selectedBranch)) {
+                    card.style.display = 'block'; // Show cards that match the selected branch
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Payment</title>
+     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="paysheet.css">
+</head>
+<body>
+
+<header>
+    <h1>Care Compass Hospitals</h1>
+</header>
+
+<section>
+    <h2>Make a Payment</h2>
+    <form id="payment-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+        <label for="branch">Select Branch</label>
+        <select id="branch" name="branch" required>
+            <option value="" disabled selected>-- Select a Branch --</option>
+            <option value="kandy">Kandy</option>
+            <option value="colombo">Colombo</option>
+            <option value="kurunegala">Kurunegala</option>
+        </select>
+
+        <label for="doctor">Consulting Doctor</label>
+        <select id="doctor" name="doctor" required onchange="updateTotal()">
+            <option value="" disabled selected>-- Select a Doctor --</option>
+            <option value="5000">Dr. John Doe (Cardiologist) - LKR 5000</option>
+            <option value="4000">Dr. Jane Smith (Dermatologist) - LKR 4000</option>
+            <option value="3000">Dr. Mark Taylor (Pediatrician) - LKR 3000</option>
+        </select>
+        
+        <label for="date">Appointment Date</label>
+        <input type="date" id="date" name="date" required>
+        
+        <label for="additional-charges">Additional Charges (LKR)</label>
+        <input type="number" id="additional-charges" name="additional-charges" placeholder="Enter additional charges (if any)" value="0" oninput="updateTotal()">
+        
+        <label for="total-amount">Total Amount (LKR)</label>
+        <input type="text" id="total-amount" name="total-amount" readonly>
+
+        <label for="payment-method">Payment Method</label>
+        <select id="payment-method" name="payment-method" required>
+            <option value="" disabled selected>-- Select Payment Method --</option>
+            <option value="cash">Cash</option>
+            <option value="credit-card">Credit Card</option>
+            <option value="debit-card">Debit Card</option>
+            <option value="online">Online Payment</option>
+        </select>
+
+        <label for="card-details">Card Details (If Applicable)</label>
+        <input type="text" id="card-details" name="card-details" placeholder="Enter card number (for card payments only)">
+        
+        <button type="submit">Submit Payment</button>
+    </form>
+</section>
+
+<script>
+    function updateTotal() {
+        const doctorFee = parseFloat(document.getElementById('doctor').value) || 0;
+        const additionalCharges = parseFloat(document.getElementById('additional-charges').value) || 0;
+        const total = doctorFee + additionalCharges;
+        document.getElementById('total-amount').value = total.toFixed(2);
+    }
+
+    document.getElementById('payment-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const paymentData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            branch: document.getElementById('branch').value,
+            doctor: document.getElementById('doctor').options[document.getElementById('doctor').selectedIndex].text,
+            date: document.getElementById('date').value,
+            additionalCharges: document.getElementById('additional-charges').value,
+            totalAmount: document.getElementById('total-amount').value,
+            paymentMethod: document.getElementById('payment-method').value,
+            cardDetails: document.getElementById('card-details').value
+        };
+
+        console.log('Payment Data:', paymentData);
+
+        alert('Your payment of LKR ' + paymentData.totalAmount + ' has been submitted successfully!');
+        document.getElementById('payment-form').reset();
+        document.getElementById('total-amount').value = '';
+    });
+</script>
+
+</body>
+</html>
